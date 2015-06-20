@@ -20,9 +20,9 @@ else:
 db_parameters = dict(dbn='postgres', db='pythonexpress')
 
 # contact form default e-mail
-contact_email = "python@python.ie"
+contact_email = "contact@python.ie"
 # default admin e-mail
-admin_user = "python@python.ie"
+admin_user = "contact@python.ie"
 
 # MAIL SETTINGS
 
