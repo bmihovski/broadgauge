@@ -3,9 +3,9 @@ BroadGauge
 
 Platform for managing training/workshops by connecting interested trainers and educational institutes interested in conducting trainings for their students. 
 
-This is going to be used for managing Python workshops going to be conducted across India as part of PyCon India 2014.
+This is going to be used for managing Python workshops going to be conducted across Ireland.
 
-[![Build Status](https://travis-ci.org/anandology/broadgauge.svg?branch=master)](https://travis-ci.org/anandology/broadgauge)
+
 
 Requirements
 ------------
@@ -19,7 +19,7 @@ How to setup
 
 * Clone the repo
 
-        ## CHANGE TO PYTHON IRELAND git clone git://github.com/anandology/broadgauge.git
+        ## CHANGE TO PYTHON IRELAND git clone git@github.com:PythonIreland/broadgauge.git
         cd broadgauge
 
 * Setup virtualenv and install python packages
@@ -31,7 +31,7 @@ How to setup
 * Start Postgres server
 
 Linux
-
+        Started automatically. No need to worry.
 
 Mac
 
@@ -45,6 +45,7 @@ Mac
 
 
 Windows
+        http://www.postgresql.org/docs/9.3/static/app-pg-ctl.html
 
 * Create a database
 
@@ -53,6 +54,15 @@ Windows
 * Add schema
         
         psql pythonexpress < broadgauge/schema.sql
+
+* Become a user in your database
+
+        Create user in database:
+                sudo -u postgres psql
+                create role [name];
+                alter role [name] with login;
+                \q
+        Edit the default_settings.py file changing the 'user' value to your [name]
 
 * Run the app
 

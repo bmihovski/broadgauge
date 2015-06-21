@@ -56,9 +56,9 @@ class GitHub(OAuth2Service):
         return OAuth2Service.get_auth_session(self, **kwargs)
 
     def get_userdata(self, code):
-        """Returns the relevant userdata from github.
+        """Returns the relevant userdata from GitHub.
 
-        This function must be called from githun oauth callback
+        This function must be called from GitHub oauth callback
         and the auth code must be passed as argument.
         """
         try:
@@ -69,9 +69,10 @@ class GitHub(OAuth2Service):
                 logger.error("No verified email found for this user {}".format(d['login']))
                 return
             return dict(
-                name=d["name"],
+                name=(d["name"] if "name" in d else ''),
                 email=email,
                 username=d["login"],
+                avatar_url=d["avatar_url"],
                 github=d["login"],
                 service="GitHub")
         except KeyError, e:
@@ -114,9 +115,9 @@ class Google(OAuth2Service):
         return OAuth2Service.get_auth_session(self, **kwargs)
 
     def get_userdata(self, code):
-        """Returns the relevant userdata from github.
+        """Returns the relevant userdata from Google.
 
-        This function must be called from githun oauth callback
+        This function must be called from Google oauth callback
         and the auth code must be passed as argument.
         """
         try:
@@ -128,6 +129,7 @@ class Google(OAuth2Service):
             return dict(
                 name=d['name'],
                 email=d['email'],
+                avatar_url=d['picture'],
                 username=username,
                 service='Google')
         except KeyError, e:
@@ -160,9 +162,9 @@ class Facebook(OAuth2Service):
         return OAuth2Service.get_auth_session(self, **kwargs)
 
     def get_userdata(self, code):
-        """Returns the relevant userdata from github.
+        """Returns the relevant userdata from Facebook.
 
-        This function must be called from githun oauth callback
+        This function must be called from Facebook oauth callback
         and the auth code must be passed as argument.
         """
         try:
