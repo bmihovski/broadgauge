@@ -28,7 +28,7 @@ def get_workshop(id):
     if not workshop:
         raise web.notfound()
     user = account.get_current_user()
-    if workshop.is_hidden() and user and not user.is_admin():
+    if workshop.is_hidden() and (not user or (user and not user.is_admin())):
         raise web.forbidden(render_template("permission_denied.html"))
     return workshop
 
