@@ -12,13 +12,13 @@ What should you do?
 Sign up as a trainer on the Python Express website and check the list of up coming workshops from Workshops tab. If you find any of them are suitable for you and you want to take it, you can select them by workshop name and confirm it from Express Interest button. Once you are accepted, you will be notified and things can be taken forward from there.
 
 Sign up as a trainer now:
-[http://www.pythonexpress.ie/trainers/signup](http://www.pythonexpress.ie/trainers/signup)
+[/trainers/signup](/trainers/signup)
 
 If you are interested in organizing a Python workshop, sign up as an organization/institution on the Python Express website.
 You can set up a new workshop from your organization space which can be found into Organization tab. The trainers who have already signed up will be able to see all of the upcoming workshops which belong to your institution. If they are interested, they can apply as a trainers. Once that happens, you will be able to accept them and take it forward.
 
 Register an organization now:
-[http://www.pythonexpress.ie/orgs/signup](http://www.pythonexpress.ie/orgs/signup)
+[/orgs/signup](/orgs/signup)
 
 Spread the word and let us spread the love of Python far and wide.
 
