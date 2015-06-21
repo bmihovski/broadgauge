@@ -35,7 +35,7 @@ create table workshop (
     trainer_id integer references users,
     title text,
     description text,
-    status text default 'pending', -- one of pending, confirmed or completed
+    status text default 'pending', -- one of hidden, pending, confirmed or completed
     expected_participants integer,
     "date" date
 );

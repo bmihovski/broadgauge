@@ -83,6 +83,15 @@
   {% if org.can_update(user) %}
   <a class="small" href="/workshops/{{workshop.id}}/edit">Edit</a>
   {% endif %}
+  {% if user and user.is_admin() %}
+    <form method="POST" action="/workshops/{{workshop.id}}">
+    {% if workshop.is_hidden() %}
+      <button type="submit" class="btn btn-warning" name="action" value="unhide-workshop">Workshop is hidden - Click to make visible</button>
+    {% else %}
+      <button type="submit" class="btn btn-warning" name="action" value="hide-workshop">Workshop is visible - Click to hide from all users</button>
+    {% endif %}
+    </form>
+  {% endif %}
 </h1>
 <div class="workshop-venue">
   <span class="octicon octicon-location"></span>
