@@ -18,7 +18,7 @@ github_client_secret = '343c40e95099c9b27b01a49df8daf2f1cedd8f61'
 google_client_id = '483978112071-ps7jdal5tdbtjo0utapi5f3lud75spru.apps.googleusercontent.com'
 google_client_secret = 'Ld4qdhXnQO-Qzc54tcf51LA6'
 
-db_parameters = dict(dbn='postgres', db='pythonexpress')
+db_parameters = dict(dbn='postgres', db='pythonexpress', user='gerry', pw='myname1')
 
 # MAIL SETTINGS
 
